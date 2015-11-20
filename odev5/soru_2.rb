@@ -8,4 +8,4 @@ def rastgele(s1,s2)
  return dizi
 end
 
-puts rastgele(1,2)
+puts rastgele(1,29)
