@@ -2,9 +2,9 @@ def agirlik(cumle)
   words=Array.new
   cumle=cumle.downcase.split
   i=0
-  cumle.each do |kelime|
+   for kelime in cumle 
     toplam=0
-    kelime.split(//).each do |harf|
+    for harf in kelime.split(//)
 	if harf=="a" || harf=="e"
 	  toplam+=3
 	elsif harf=="i" || harf=="o" || harf=="u"
