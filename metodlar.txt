@@ -1,0 +1,52 @@
+#### Methodlar ####
+.include? 'f'  		## 'f' karakteri içerir mi?
+array << 'foo'		## dizinin sonuna eleman ekler
+.split			## split eder
+.start_with? 'foo'	## 'foo' ile mi başlıyor?
+.end_with? 'foo'	## 'foo' ile mi bitiyor?
+.to_f .to_i .to_s	## _f (Float) , _i (Integer) , _s (String)
+.class			## Türünü gösterir
+.ord			## ASCII kodunu gösterir
+.chr			#i ASCII tablosundaki karşılığını gösterir
+.capitalize		#s İlk karakteri büyütür.
+.downcase		#s Tüm karakterleri küçültür.
+.upcase			#s Tüm karakterleri büyütür.
+.chop			#s Sondaki karakteri siler.
+.next			#s Sondaki karakteri alfabetik sıraya göre bir sonraki karaktere çevirir.
+.swapcase		#s Büyük to Küçük, Küçük to Büyük
+.length , .size		## Dizi/String Uzunluğunu/Karakter Sayısını verir
+.reverse		## Diziyi/Stringi ters çevirir
+rand(1..50)		## 1-50 arası rastgele seçim yapar. (1-50 dahil)
+.gsub(<eski>,<yeni>)	## <eski> alanına girileni <yeni> alanındakiyle değiştirir. Örnek kulannım regex bölümünde var.
+.eql?			## Eşit mi?
+.abs			#i Mutlak Değer
+.zero?			#i sıfır mı?
+.even? .odd?		#i çift sayı mı? tek sayı mı?
+.next .pred		#i sonraki önceki sayı
+.ceil 			#i Tavan değeri
+%x 			## Dış komut çalıştırır f.e: %x|ls|
+<<END <icerik> END	## Dene ve gör :)
+.concat			#a Array sonuna eklemek için
+.join			#a elemanları birleştirip stringe çevirir
+.unshift		#a başına eleman eklemek için
+.insert(<index>,<eleman>)# belirtilen konuma eleman ekler.
+.replace		#a array içini değiştirir
+.pop  veya .pop(i)	#a sondaki elemanı siler
+.shift			#a Baştaki elemanı siler
+.delete(<eleman>)	#a belirtilen elemanı siler
+.delete_at(<index>)	#a indexteki elemanı siler
+.first	.last		#a ilk-son eleman		 
+.sort			#a sıralama yapar
+
+#### Bazı Kısayollar ####
+foo = %w(a b c)   			## çıktısı: ["a","b","c"]
+4.class==Fixnum ? "Evet" : "Hayır"	## çıktısı: Evet
+10.times do |i| print i end		## çıktısı: 0123456789
+notlar.delete_if{|not| not<50} 		## dizi için şartlı ifadeye göre siler.
+(1..10).to_a				## çıktısı: [1,2,3,4,5,6,7,8,9,10]
+
+#### Regular Expressions Örnekleri ####
+.split(/[, -]/)		## virgül,boşluk ve tire karakterlerinden split eder
+.split(/[aeiou]/)	## a,e,i,o ve u karakterlerinden split eder.
+.split(/[0-9]/)		## rakamlardan split eder
+.gsub(/[aeiou]/,'*')	## a,e,i,o,u karakterlerini * karakterine çevirir.
