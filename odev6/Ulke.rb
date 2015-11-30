@@ -2,7 +2,31 @@
 comm='Komut Giriniz: '
 wrongcmd='Hatalı Komut Girdiniz!'
 
-#Ülke-Başkent 
+class String
+  # String Colorization
+  def colorize(color_code)
+    "\e[#{color_code}m#{self}\e[0m"
+  end
+
+  def red
+    colorize(31)
+  end
+
+  def green
+    colorize(32)
+  end
+
+  def yellow
+    colorize(33)
+  end
+
+  def blue
+    colorize(34)
+  end
+
+end
+
+ 
 class Country
 	
   def fix()	
@@ -65,6 +89,15 @@ def command(cmd)
 	end
 end
 
+puts "KULLANABİLECEĞİNİZ KOMUTLAR:\n".red
+puts "Giriş İçin--> "+"Login".green
+puts "Çıkış İçin--> "+"Cikis".green
+
+puts "Ülke'nin başkentini öğrenmek için -->"+"UlkeBaskent".yellow
+puts "Başkent'in ülkesini öğrenmek için -->"+"BaskentUlke".yellow
+
+puts "\n DİKKAT: ".red+" Login ile başlamanız yararınıza olacaktır!".blue
+puts "-".green*80
 
 islogin=false
 
@@ -83,7 +116,7 @@ while islogin==false
 			puts 'Başarılı Giriş Yaptınız!'
 				inside=false
 				while inside==false
-					print comm
+					print "\n"+comm
 					comd=gets.chomp
 					getcom=command(comd)
 						if getcom!='false'
