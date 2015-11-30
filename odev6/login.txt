@@ -1,0 +1,5 @@
+admin,centos
+durmus,ubuntu
+nurullah,pardus
+aykut,linux
+gulcan,debian
