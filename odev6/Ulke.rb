@@ -1,6 +1,7 @@
 #encoding:utf-8
 comm='Komut Giriniz: '
 wrongcmd='Hatalı Komut Girdiniz!'
+firstlogin = 'Önce Giriş Yapmalısınız'
 
 class String
   # String Colorization
@@ -80,7 +81,7 @@ def pass(user,pass)
 end
 
 def command(cmd)
-	access=['Login','UlkeBaskent','BaskentUlke','Cikis']
+	access=['Login','l','UlkeBaskent','u','BaskentUlke','b','Cikis','c']
 		
 	if access.include? cmd
 		cmd
@@ -90,11 +91,11 @@ def command(cmd)
 end
 
 puts "KULLANABİLECEĞİNİZ KOMUTLAR:\n".red
-puts "Giriş İçin--> "+"Login".green
-puts "Çıkış İçin--> "+"Cikis".green
+puts "Giriş İçin--> "+"Login [l]".green
+puts "Çıkış İçin--> "+"Cikis [c]".green
 
-puts "Ülke'nin başkentini öğrenmek için -->"+"UlkeBaskent".yellow
-puts "Başkent'in ülkesini öğrenmek için -->"+"BaskentUlke".yellow
+puts "Ülke'nin başkentini öğrenmek için -->"+"UlkeBaskent [u]".yellow
+puts "Başkent'in ülkesini öğrenmek için -->"+"BaskentUlke [b]".yellow
 
 puts "\n DİKKAT: ".red+" Login ile başlamanız yararınıza olacaktır!".blue
 puts "-".green*80
@@ -104,8 +105,9 @@ islogin=false
 while islogin==false
 	print comm
 	kmt=gets.chomp
-	
-	if command(kmt)=='Login'
+	komut=command(kmt)	
+
+	if komut=='Login' || komut=='l'
 		print 'Kullanıcı Adı:'
 		us=gets.chomp
 		
@@ -123,11 +125,11 @@ while islogin==false
 							query=Country.new
 							query.fix
 
-							if getcom=='UlkeBaskent'
+							if getcom=='UlkeBaskent' || getcom=='u'
 									print 'Ülke Giriniz: '
 									cnt=gets.chomp
 									puts query.coTOcap(cnt)
-							elsif getcom=='BaskentUlke'
+							elsif getcom=='BaskentUlke' || getcom=='b'
 									print 'Başkent Giriniz: '
 									capt=gets.chomp
 									puts query.capTOco(capt)
@@ -145,10 +147,10 @@ while islogin==false
 		else
 			puts 'Hatalı Şifre Girdiniz!'
 		end
-	elsif command(kmt)=='Cikis'
+	elsif komut=='Cikis' || komut=='c'
 		islogin=true
 	elsif command(kmt)!=false
-		puts 'Önce Giriş Yapmalısınız'
+		puts firstlogin
 	else
 		puts wrongcmd
 	end
