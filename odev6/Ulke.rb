@@ -133,10 +133,12 @@ while islogin==false
 									print 'Başkent Giriniz: '
 									capt=gets.chomp
 									puts query.capTOco(capt)
-							elsif getcom=='Login'
+							elsif getcom=='Login' || getcom=='l'
 								puts 'Whoops?'
-							else
+							elsif getcom=='Cikis' || getcom=='c'
 								inside=true
+							else
+								puts wrongcmd
 							end
 
 						else
