@@ -116,7 +116,7 @@ while $islogin==true
 			print 'Ülke Giriniz: '
 			ulk=gets.chomp
 			puts query.coTOcap(ulk)
-		elsif commit=='BaskentUlke' || commit='b'
+		elsif commit=='BaskentUlke' || commit=='b'
 			print 'Başkent Giriniz: '
 			bsk=gets.chomp
 			puts query.capTOco(bsk)
