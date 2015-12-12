@@ -1,0 +1,1 @@
+Her dilde oldugu gibi Ruby dilinde de donguler mevcut. Bu yazimizda Ruby’nin dongulerinden biri olan each dongusunu kullanacagiz. Each dongusu bir array yada hash içindeki elemanlari sirali olarak donduren dongudur.
