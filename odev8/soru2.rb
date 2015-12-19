@@ -48,6 +48,7 @@ end
 max = largest_hash_key update
 sort = sortmax max,update
 bestkey,bestval = size sort
+
 puts "En yüksek not #{bestval['score']} ile #{bestkey} numaralı #{bestval['name']} öğrencisine aittir."
 
 
