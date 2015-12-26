@@ -25,7 +25,7 @@ class WordCounter
     final = Hash.new(0)
     
     clearfix.each do |val|
-      final[val] += 1
+      final[val.to_sym] += 1
     end
     
     final
@@ -33,7 +33,8 @@ class WordCounter
   
   # Girilen değerden büyük olanları ayırır
   def getOutofRange
-    same.select { |k,v| v > @range}
+    h = same.select { |k,v| v > @range}
+    h.sort_by {|key,val| val}.reverse.to_h
   end
 
 end
@@ -42,6 +43,4 @@ end
 print 'Esik Degeri Giriniz: '
 val = gets.chomp.to_i
 count = WordCounter.new 'metin.txt','stp.txt',val
-
-count.getOutofRange.sort_by {|k,v| puts "#{k} kelimesi #{v} kez kullanildi" }
-
+count.getOutofRange.each {|k,v| puts "#{k} kelimesi #{v} kez kullanildi."}
