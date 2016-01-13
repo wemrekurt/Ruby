@@ -1,0 +1,17 @@
+1. 20 kişilik bir sınıfta öğrencilerin bir dersten aldığı notlar klavyeden girilecektir. Notlar girildikten sonra, sınıfın ortalamasını, sınıftaki en yüksek ve en düşük notu bulan ve ekranda gösteren programı gerçekleyin.
+
+2. Parametre olarak aldığı 2 tamsayının EKOK'unu hesaplayan fonksiyonu gerçekleyin.
+
+3. Girilen sayının faktöriyelini hesaplayan fonksiyon gerçekleyin.
+
+4. Kullanıcının verdiği rakamları küçkten büyüke doğru sıralayan programı gerçekleyin.
+
+5. matrix.txt dosyasındaki "FLAG_{matrix_cokiyi}" bayrağı yakalayan programı yazınız. (İpucu. fazlalıkları ortadan kaldır)
+
+6. Girilen kelimedeki sessiz harfleri küçültüp, sesli harfleri de büyütüp ekrana yazan programı yazınız.
+
+7. Girilen sayının karekökünü alan programı yazınız. 
+
+8. Girilen kelimedeki sesli harf sayısını ve listesini ekrana yazdıran programı gerçekleyiniz.
+
+9. math gibi hazır gem kullanmadan kesirlele işlem yapan programı gerçekleyin.
