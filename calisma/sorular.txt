@@ -14,3 +14,4 @@
 
 8. Girilen kelimedeki sesli harf sayısını ve listesini ekrana yazdıran programı gerçekleyiniz.
 
+9. users.txt dosyasındaki kullanıcı-adı şifre ile üye girişini hash ile en kısa yoldan gerçekleyin.
